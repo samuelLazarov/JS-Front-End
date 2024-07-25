@@ -16,4 +16,5 @@ function solve(input) {
         .forEach(cat => cat.meow());
 }
 
+
 solve(['Mellow 2', 'Tom 5']);
