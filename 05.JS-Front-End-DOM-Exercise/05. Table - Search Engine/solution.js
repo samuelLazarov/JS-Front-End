@@ -1,8 +1,29 @@
 function solve() {
    document.querySelector('#searchBtn').addEventListener('click', onClick);
 
+   const searchFieldEl = document.getElementById("searchField");
+   const tableRowEls = document.querySelectorAll("table.container tbody tr");
+
+   function getMatchElements(input) {
+      return [...tableRowEls].filter((rowEl) =>
+      rowEl.textContent.toLocaleLowerCase().includes(input.toLowerCase())
+      );
+   }
+
+   function clearPreviousState() {
+      [...tableRowEls].forEach((rowEL) => {
+         rowEL.classList.remove("select");
+      });
+   }
+
    function onClick() {
-      //   TODO:
+      clearPreviousState();
+
+      getMatchElements(searchFieldEl.value).forEach((matchRow) => {
+         matchRow.classList.add("select");
+      });
+
+      searchFieldEl.value = "";
 
    }
 }
