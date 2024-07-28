@@ -3,14 +3,14 @@ function solve() {
 
    const inputTextArea = document.querySelector("#inputs textarea");
    const bestRestaurantEl = document.querySelector("#outputs #bestRestaurant p");
-   const workersEl = document.querySelector("#output #workers p");
+   const workersEl = document.querySelector("#outputs #workers p");
 
    function onClick() {
       const restaurants = JSON.parse(inputTextArea.value).reduce((acc, data) => {
          const [restaurantName, workersData] = data.split(" - ");
 
-         const workers = workersData.split(", ").map((workersData) => {
-            const [name, salary] = workersData.split(" ");
+         const workers = workersData.split(", ").map((workerData) => {
+            const [name, salary] = workerData.split(" ");
             return {
                name,
                salary: Number(salary),
@@ -26,7 +26,6 @@ function solve() {
          acc[restaurantName].workers.push(...workers);
 
          return acc;
-
       }, {});
 
       function getAvgSalary(restaurantData) {
@@ -44,7 +43,7 @@ function solve() {
          .slice()
          .sort((a, b) => b.salary - a.salary);
 
-      const bestRestaurantElTextContent = `Name: ${bestRestaurantKey} Average Salary: ${getAvgSalar(
+      const bestRestaurantElTextContent = `Name: ${bestRestaurantKey} Average Salary: ${getAvgSalary(
          restaurants[bestRestaurantKey]
       ).toFixed(2)} Best Salary: ${bestWorkers[0].salary.toFixed(2)}`;
 
