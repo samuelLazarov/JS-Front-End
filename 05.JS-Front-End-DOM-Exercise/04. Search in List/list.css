@@ -3,10 +3,12 @@
 body {
     width: 20%;
     margin: 0 auto;
-    font-family: 'Raleway',sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
-article{
-    background: #34469c;;
+
+article {
+    background: #34469c;
+    ;
     border-radius: 20px;
     margin-top: 20px;
     padding: 20px;
@@ -24,24 +26,25 @@ article{
     color: white;
 }
 
-#searchText{
+#searchText {
     background: white;
     text-decoration: none;
     margin: 15px auto;
     width: 90%;
-    padding:5px 10px;
+    padding: 5px 10px;
     text-align: left;
 }
 
 button {
     background: white;
-    margin-left:8px;
+    margin-left: 8px;
     padding: 8px 10px;
     border-radius: 15px;
     font-weight: bold;
     cursor: pointer;
     outline: none;
-    color: #34469c;;
+    color: #34469c;
+    ;
     text-transform: uppercase;
     border: 2px solid white;
 
@@ -49,9 +52,11 @@ button {
 
 button:hover {
     color: white;
-    background: #34469c;;
+    background: #34469c;
+    ;
     border: 2px solid white;
 }
+
 #result {
     padding: 10px;
     margin: 10px;
