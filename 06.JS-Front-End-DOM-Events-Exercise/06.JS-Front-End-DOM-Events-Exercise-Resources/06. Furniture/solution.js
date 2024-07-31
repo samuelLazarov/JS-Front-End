@@ -1,4 +1,14 @@
 function solve() {
+    const[generateBtn, buyBtn] = document.querySelectorAll("button");
+    const[inputTextarea, outputTextarea] = document.querySelectorAll("textarea");
 
-  //TODO...
+    
+
+    function onGenerateBtnClickHandler() {
+      const inputData = JSON.parse(inputTextarea.value);
+    }
+
+
+    generateBtn.addEventListener("click", onGenerateBtnClickHandler);
+  
 }
