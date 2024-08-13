@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\01.JS-Syntax-Fundamentals\\05-math-operations.js"
+            "program": "${workspaceFolder}\\${file}"
         }
     ]
 }
