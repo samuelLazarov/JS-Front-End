@@ -41,15 +41,15 @@ function adventure(input) {
                 console.log(`${characterName}'s pistol is fully loaded!`);
             }
         },
-        PatchUp(characterName, amound) {
-            amound = Number(amound);
+        PatchUp(characterName, amount) {
+            amount = Number(amount);
             const currentHp = posse[characterName].hp;
             if (currentHp < 100) {
-                const newHp = Math.min(currentHp + amound, 100);
+                const newHp = Math.min(currentHp + amount, 100);
                 posse[characterName].hp = newHp;
 
-                const recoveredAmound = newHp - currentHp;
-                console.log(`${characterName} patched up and recovered ${recoveredAmound} HP!`);
+                const recoveredAmount = newHp - currentHp;
+                console.log(`${characterName} patched up and recovered ${recoveredAmount} HP!`);
             } else {
                 console.log(`${characterName} is in full health!`);
             }
