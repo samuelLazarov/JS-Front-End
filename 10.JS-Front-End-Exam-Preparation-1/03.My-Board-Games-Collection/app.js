@@ -1,4 +1,4 @@
-const baseUrl = `http://localhost:3030/jsonstore/games`;
+const BASE_URL = `http://localhost:3030/jsonstore/games`;
 
 // get load button element
 const loadButton = document.getElementById('load-games');
@@ -25,7 +25,7 @@ async function addGame() {
     clearInputs();
 
     // Create post request
-    await fetch(baseUrl, {
+    await fetch(BASE_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ async function editGame() {
     clearInputs();
 
     // send put requests
-    await fetch(`${baseUrl}/${gameId}`, {
+    await fetch(`${BASE_URL}/${gameId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ async function loadGames() {
     gameList.innerHTML = '';
 
     // Get request
-    const response = await fetch(baseUrl);
+    const response = await fetch(BASE_URL);
     const result = await response.json();
     const games = Object.values(result);
 
@@ -127,7 +127,7 @@ function createGameElement(name, type, players, gameId) {
     deleteButton.textContent = 'Delete';
     deleteButton.addEventListener('click', async () => {
         // Send delete request
-        await fetch(`${baseUrl}/${gameId}`, {
+        await fetch(`${BASE_URL}/${gameId}`, {
             method: 'DELETE',
         });
 

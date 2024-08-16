@@ -9,6 +9,12 @@ function solve() {
 
     const adoptionInfoListElements = document.getElementById("adoption-info");
 
+    function clearInputFields() {
+      typeInputElement.value = "";
+      ageInputElement.value = "";
+      genderInputElement.value = "";
+    }
+
     function createAnimalListItem () {
       const liElement = document.createElement("li");
       const articleElement = document.createElement("article");
