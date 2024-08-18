@@ -107,7 +107,7 @@ function createRecordHandler() {
         body: JSON.stringify({ name, steps, calories }),
     };
 
-    nameInputElement.value = "";
+    nameInputElement.value = ""; 
     stepsInputElement.value = "";
     caloriesInputElement.value = "";
 
